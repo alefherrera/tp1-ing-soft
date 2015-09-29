@@ -1,0 +1,10 @@
+<div ui-view>
+    <div class="container">
+        <div class="list-group">
+            <a href class="list-group-item" ng-repeat="pelicula in peliculas" ng-click="detalle(pelicula)">
+                <h4 class="list-group-item-heading">{{pelicula.Title}}</h4>
+                <p class="list-group-item-text">{{pelicula | json }}</p>
+            </a>
+        </div>
+    </div>
+</div>

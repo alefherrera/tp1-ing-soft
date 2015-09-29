@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title"> </h3>
+        </div>
+        <div class="panel-body">
+        <div class="jumbotron">
+        	<div class="container">
+        		<h1>{{ pelicula.Title }}</h1>
+        		<img ng-src="{{pelicula.Poster}}" class="img-responsive" alt="Image">
+        		<p>Contents ...</p>
+        		<p>
+        			<a class="btn btn-primary btn-lg">Learn more</a>
+        		</p>
+        	</div>
+        </div>
+            
+        </div>
+    </div>
+</div>
+<div class="col-md-12">
+    This is the detalle view. {{ pelicula | json }}
+</div>

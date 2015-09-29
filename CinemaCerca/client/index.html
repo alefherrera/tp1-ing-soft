@@ -20,7 +20,9 @@
     <link rel="stylesheet" href="app/app.css">
       <!-- injector:css -->
       <link rel="stylesheet" href="app/app.css">
+      <link rel="stylesheet" href="app/detalle/detalle.css">
       <link rel="stylesheet" href="app/main/main.css">
+      <link rel="stylesheet" href="app/peliculas/peliculas.css">
       <link rel="stylesheet" href="components/modal/modal.css">
       <!-- endinjector -->
     <!-- endbuild -->
@@ -31,7 +33,7 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div ui-view=""></div>
+    <div ui-view></div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>
@@ -66,8 +68,13 @@
         
         <script src="app/app.js"></script>
           <!-- injector:js -->
+          <script src="app/OMDb/OMDb.service.js"></script>
+          <script src="app/detalle/detalle.controller.js"></script>
+          <script src="app/detalle/detalle.js"></script>
           <script src="app/main/main.controller.js"></script>
           <script src="app/main/main.js"></script>
+          <script src="app/peliculas/peliculas.controller.js"></script>
+          <script src="app/peliculas/peliculas.js"></script>
           <script src="components/modal/modal.service.js"></script>
           <script src="components/navbar/navbar.controller.js"></script>
           <!-- endinjector -->
