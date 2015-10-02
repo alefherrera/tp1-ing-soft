@@ -7,7 +7,7 @@ angular.module('cinemaCercaApp')
   	var url = "http://www.omdbapi.com";
 
   	var get = function (id) {
-  		return $http.get(url + "/?i=" + id).then(function (response) {
+  		return $http.get(url + "/?plot=full&i=" + id).then(function (response) {
   			return response.data;
   		});
   	};

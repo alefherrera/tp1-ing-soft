@@ -3,7 +3,7 @@
 angular.module('cinemaCercaApp')
   .config(function ($stateProvider) {
     $stateProvider
-      .state('peliculas', {
+      .state('main.peliculas', {
         url: '/peliculas',
         templateUrl: 'app/peliculas/peliculas.html',
         controller: 'PeliculasCtrl'

@@ -13,7 +13,7 @@ angular.module('cinemaCercaApp')
         });
 
         $scope.detalle = function(pelicula) {
-            $state.go("peliculas.detalle", {
+            $state.go("main.peliculas.detalle", {
                 id: pelicula.imdbID
             });
         }

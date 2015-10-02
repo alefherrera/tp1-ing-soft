@@ -1,23 +1,26 @@
 <div class="container">
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h3 class="panel-title"> </h3>
+            <div class="page-header">
+                <h1>{{ pelicula.Title }}</h1>
+            </div>
         </div>
         <div class="panel-body">
-        <div class="jumbotron">
-        	<div class="container">
-        		<h1>{{ pelicula.Title }}</h1>
-        		<img ng-src="{{pelicula.Poster}}" class="img-responsive" alt="Image">
-        		<p>Contents ...</p>
-        		<p>
-        			<a class="btn btn-primary btn-lg">Learn more</a>
-        		</p>
-        	</div>
-        </div>
-            
+            <div class="row">
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                    <img ng-src="{{pelicula.Poster}}" class="img-responsive" alt="Image">
+                </div>
+                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                    <h4>Año <small>{{ pelicula.Year }}</small></h4>
+                    <h4>Duracion <small>{{ pelicula.Runtime }}</small></h4>
+                    <h4>Genero <small>{{ pelicula.Genre }}</small></h4>
+                    <h4>Director <small>{{ pelicula.Director }}</small></h4>
+                    <h4>Sinopsis <small>{{ pelicula.Plot }}</small></h4>
+                    <h4>Actores <small>{{ pelicula.Actors }}</small></h4>
+                    <h2>Metascore <small>{{ pelicula.Metascore }}</small></h2>
+                    <h2>Rating <small>{{ pelicula.imdbRating }}</small></h2>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-<div class="col-md-12">
-    This is the detalle view. {{ pelicula | json }}
 </div>
