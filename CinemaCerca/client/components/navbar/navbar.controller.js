@@ -5,6 +5,9 @@ angular.module('cinemaCercaApp')
     $scope.menu = [{
       'title': 'Home',
       'link': '/'
+    },{
+      title: 'Peliculas',
+      link: '/peliculas'
     }];
 
     $scope.isCollapsed = true;

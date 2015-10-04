@@ -1,9 +1,12 @@
 <div ui-view>
-    <div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <input type="text" placeholder="Buscar" class="form-control" ng-model="query">
+        </div>
         <div class="list-group">
-            <a href class="list-group-item" ng-repeat="pelicula in peliculas" ng-click="detalle(pelicula)">
-                <h4 class="list-group-item-heading">{{pelicula.Title}}</h4>
-                <p class="list-group-item-text">{{pelicula | json }}</p>
+            <a href class="list-group-item" ng-repeat="pelicula in peliculas | filter : { Title: query }" ng-click="detalle(pelicula)">
+                <h4 class="list-group-item-heading">{{pelicula.Title}} <small>{{ " - " + pelicula.Genre + " / " + pelicula.Runtime }}</small></h4>
+                <p class="list-group-item-text">{{ pelicula.Plot }}</p>
             </a>
         </div>
     </div>

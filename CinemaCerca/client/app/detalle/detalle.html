@@ -1,26 +1,32 @@
-<div class="container">
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <div class="page-header">
-                <h1>{{ pelicula.Title }}</h1>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h1>{{ pelicula.Title }}</h1>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                <img ng-src="{{pelicula.Poster}}" class="img-responsive" alt="Image">
+            </div>
+            <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                <h4>Año <small>{{ pelicula.Year }}</small></h4>
+                <h4>Duracion <small>{{ pelicula.Runtime }}</small></h4>
+                <h4>Genero <small>{{ pelicula.Genre }}</small></h4>
+                <h4>Director <small>{{ pelicula.Director }}</small></h4>
+                <h4>Sinopsis <small>{{ pelicula.Plot }}</small></h4>
+                <h4>Actores <small>{{ pelicula.Actors }}</small></h4>
+                <h4>Metascore <small>{{ pelicula.Metascore }} / 100</small></h4>
+                <h4>Rating <rating ng-model="pelicula.imdbRating" max="10" readonly="true"></rating><small>{{ pelicula.imdbRating }} / 10</small></h4>
             </div>
         </div>
-        <div class="panel-body">
-            <div class="row">
-                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                    <img ng-src="{{pelicula.Poster}}" class="img-responsive" alt="Image">
-                </div>
-                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
-                    <h4>Año <small>{{ pelicula.Year }}</small></h4>
-                    <h4>Duracion <small>{{ pelicula.Runtime }}</small></h4>
-                    <h4>Genero <small>{{ pelicula.Genre }}</small></h4>
-                    <h4>Director <small>{{ pelicula.Director }}</small></h4>
-                    <h4>Sinopsis <small>{{ pelicula.Plot }}</small></h4>
-                    <h4>Actores <small>{{ pelicula.Actors }}</small></h4>
-                    <h2>Metascore <small>{{ pelicula.Metascore }}</small></h2>
-                    <h2>Rating <small>{{ pelicula.imdbRating }}</small></h2>
-                </div>
-            </div>
+    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Trailer</h3>
+    </div>
+    <div class="panel-body">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" ng-src="{{trustSrc(pelicula.Trailer)}}" frameborder="0" allowfullscreen></iframe>
         </div>
     </div>
 </div>

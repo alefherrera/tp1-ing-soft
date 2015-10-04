@@ -4,11 +4,23 @@ angular.module('cinemaCercaApp')
     .controller('PeliculasCtrl', function($scope, OMDb, $state) {
         $scope.message = 'Hello';
         $scope.peliculas = [];
-        var peliculas = ["tt0068646", "tt0110912", "tt0111161", "tt0468569", "tt0137523", "tt1375666"];
+        var peliculas = [{
+            imdbID: "tt0068646",
+        }, {
+            imdbID: "tt0110912"
+        }, {
+            imdbID: "tt0111161"
+        }, {
+            imdbID: "tt0468569"
+        }, {
+            imdbID: "tt0137523"
+        }, {
+            imdbID: "tt1375666"
+        }];
 
         angular.forEach(peliculas, function(pelicula) {
-            OMDb.get(pelicula).then(function(r) {
-                $scope.peliculas.push(r);
+            OMDb.get(pelicula.imdbID).then(function(r) {
+                $scope.peliculas.push(angular.extend(pelicula, r));
             });
         });
 
