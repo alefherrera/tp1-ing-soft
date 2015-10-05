@@ -6,9 +6,13 @@ Una ves descargado, abrir una terminal y ejecutar el siguiente comando:
 
 npm install -g yo grunt-cli bower
 
-Una ves terminado eso, clonar el repositorio, abrir una consola en la carpeta y ejecutar el comando:
+Una vez terminado eso, clonar el repositorio, abrir una consola en la carpeta y ejecutar el comando:
 
 npm install
+
+despues, ejecutar:
+
+bower install
 
 Eso va a descargar las dependencias del proyecto. Luego ejecutando:
 
