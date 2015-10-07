@@ -4,8 +4,8 @@
             <input type="text" placeholder="Buscar" class="form-control" ng-model="query">
         </div>
         <div class="list-group">
-            <a href class="list-group-item" ng-repeat="pelicula in peliculas | filter : { Title: query }" ng-click="detalle(pelicula)">
-                <div class="row">
+            <a href class="list-group-item col-xs-12 col-sm-12 col-md-12 col-lg-6" ng-repeat="pelicula in peliculas | filter : { Title: query }" ng-click="detalle(pelicula)">
+                <div class="row ">
                     <div class="col-xs-4 col-sm-3 col-md-2 col-lg-2">
                         <img ng-src="{{pelicula.Poster}}" class="img-responsive thumbnail" alt="Image">
                     </div>
