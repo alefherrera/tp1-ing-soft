@@ -12,8 +12,15 @@ angular.module('cinemaCercaApp')
   		});
   	};
 
+    var small = function (id) {
+      return $http.get(url + "/?i=" + id).then(function (response) {
+        return response.data;
+      });
+    }
+
   	return {
-  		get : get
+  		get : get,
+      small: small
   	};
 
   });

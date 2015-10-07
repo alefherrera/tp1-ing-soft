@@ -19,7 +19,7 @@ angular.module('cinemaCercaApp')
         }];
 
         angular.forEach(peliculas, function(pelicula) {
-            OMDb.get(pelicula.imdbID).then(function(r) {
+            OMDb.small(pelicula.imdbID).then(function(r) {
                 $scope.peliculas.push(angular.extend(pelicula, r));
             });
         });
