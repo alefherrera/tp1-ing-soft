@@ -5,17 +5,17 @@ angular.module('cinemaCercaApp')
         $scope.message = 'Hello';
         $scope.peliculas = [];
         var peliculas = [{
-            imdbID: "tt0068646",
+            imdbID: 'tt0068646',
         }, {
-            imdbID: "tt0110912"
+            imdbID: 'tt0110912'
         }, {
-            imdbID: "tt0111161"
+            imdbID: 'tt0111161'
         }, {
-            imdbID: "tt0468569"
+            imdbID: 'tt0468569'
         }, {
-            imdbID: "tt0137523"
+            imdbID: 'tt0137523'
         }, {
-            imdbID: "tt1375666"
+            imdbID: 'tt1375666'
         }];
 
         angular.forEach(peliculas, function(pelicula) {
@@ -25,9 +25,9 @@ angular.module('cinemaCercaApp')
         });
 
         $scope.detalle = function(pelicula) {
-            $state.go("main.peliculas.detalle", {
+            $state.go('main.peliculas.detalle', {
                 id: pelicula.imdbID
             });
-        }
+        };
 
     });
