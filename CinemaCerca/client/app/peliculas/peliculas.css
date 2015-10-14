@@ -4,3 +4,8 @@
 	border-bottom-style: solid;
 	border-bottom-color: rgb(221,221,221);
 }
+
+.panel-heading + .list-group .list-group-item:first-child
+{
+	border-top-width: 1px;
+}
