@@ -3,8 +3,22 @@
         <div class="panel-heading">
             <input type="text" placeholder="Buscar" class="form-control" ng-model="query">
         </div>
-        <div class="list-group">
-            <a href class="list-group-item col-xs-12 col-sm-12 col-md-12 col-lg-6" ng-repeat="pelicula in peliculas | filter : { Title: query }" ng-click="detalle(pelicula)">
+        <div class="panel-body">
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" ng-repeat="pelicula in peliculas | filter : { Title: query }">
+                <div class="thumbnail" ng-click="detalle(pelicula)">
+                    <img ng-src="{{pelicula.Poster}}" alt="Image">
+                    <div class="caption">
+                        <h4>{{pelicula.Title}}</h4>
+                        <h4><small>{{ pelicula.Genre + " / " + pelicula.Runtime }}</small></h4>
+                        <p>
+                            {{ (pelicula.Plot | limitTo:100) + "..." }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="list-group">
+            <a href class="list-group-item col-xs-12 col-sm-12 col-md-12 col-lg-6"  ng-click="detalle(pelicula)">
                 <div class="row ">
                     <div class="col-xs-4 col-sm-3 col-md-2 col-lg-2">
                         <img ng-src="{{pelicula.Poster}}" class="img-responsive thumbnail" alt="Image">
@@ -15,6 +29,6 @@
                     </div>
                 </div>
             </a>
-        </div>
+        </div> -->
     </div>
 </div>

@@ -1,4 +1,4 @@
-.panel > .list-group:last-child .list-group-item:last-child, .panel > .panel-collapse > .list-group:last-child .list-group-item:last-child
+/*.panel > .list-group:last-child .list-group-item:last-child, .panel > .panel-collapse > .list-group:last-child .list-group-item:last-child
 {
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
@@ -8,4 +8,16 @@
 .panel-heading + .list-group .list-group-item:first-child
 {
 	border-top-width: 1px;
+}*/
+
+/*.list
+{
+	padding-left: 5px;
+	padding-right: 5px;
 }
+
+.movie
+{
+	padding-left: 10px;
+	padding-right: 10px;
+}*/
