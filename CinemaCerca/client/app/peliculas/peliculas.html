@@ -3,16 +3,16 @@
         <div class="panel-heading">
             <input type="text" placeholder="Buscar" class="form-control" ng-model="query">
         </div>
-        <div class="panel-body">
+        <div class="panel-body list">
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" ng-repeat="pelicula in peliculas | filter : { Title: query }">
                 <div class="thumbnail" ng-click="detalle(pelicula)">
                     <img ng-src="{{pelicula.Poster}}" alt="Image">
                     <div class="caption">
-                        <h4>{{pelicula.Title}}</h4>
-                        <h4><small>{{ pelicula.Genre + " / " + pelicula.Runtime }}</small></h4>
-                        <p>
-                            {{ (pelicula.Plot | limitTo:100) + "..." }}
-                        </p>
+                        <h5>{{pelicula.Title}}</h5>
+                        <h4><small>{{ pelicula.Genre + " - " + pelicula.Runtime }}</small></h4>
+                        <!-- <p>
+                            {{ (pelicula.Plot | limitTo:80) + "..." }}
+                        </p> -->
                     </div>
                 </div>
             </div>
