@@ -1,28 +1,12 @@
 'use strict';
 
 angular.module('cinemaCercaApp')
-    .controller('PeliculasCtrl', function($scope, OMDb, $state) {
-        $scope.message = 'Hello';
-        $scope.peliculas = [];
-        var peliculas = [{
-            imdbID: 'tt0068646',
-        }, {
-            imdbID: 'tt0110912'
-        }, {
-            imdbID: 'tt0111161'
-        }, {
-            imdbID: 'tt0468569'
-        }, {
-            imdbID: 'tt0137523'
-        }, {
-            imdbID: 'tt1375666'
-        }];
+    .controller('PeliculasCtrl', function($scope, OMDb, $state, $http) {
 
-        angular.forEach(peliculas, function(pelicula) {
-            OMDb.small(pelicula.imdbID).then(function(r) {
-                $scope.peliculas.push(angular.extend(pelicula, r));
-               console.log(JSON.stringify(r)); 
-            });
+        $scope.peliculas = [];
+
+        $http.get("assets/peliculas.json").then(function(response) {
+            $scope.peliculas = response.data;
         });
 
         $scope.detalle = function(pelicula) {

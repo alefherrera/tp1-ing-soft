@@ -7,8 +7,10 @@ angular.module('cinemaCercaApp')
                 url: '/{id}',
                 templateUrl: 'app/detalle/detalle.html',
                 controller: 'DetalleCtrl',
-                params: {
-                    pelicula: null
+                resolve: {
+                    pelicula: function(peliculas, $stateParams) {
+                        return _.find(peliculas, { imdbID: $stateParams.id });
+                    }
                 },
                 ncyBreadcrumb: {
                     label: '{{pelicula.Title}}'
