@@ -4,7 +4,7 @@
             <input type="text" placeholder="Buscar" class="form-control" ng-model="query">
         </div>
         <div class="panel-body list">
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" ng-repeat="pelicula in peliculas | filter : { Title: query }">
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 img" ng-repeat="pelicula in peliculas | filter : { Title: query }">
                 <div class="thumbnail" ng-click="detalle(pelicula)">
                     <img ng-src="{{pelicula.Poster}}" alt="Image">
                     <div class="caption">
