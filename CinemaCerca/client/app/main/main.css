@@ -33,6 +33,12 @@
     margin-left: 15px;
 }
 
-.background{
-    background-image: url(/assets/images/cine.jpg);
+.image{
+    width: 100%;
+    height: 600px;
+}
+
+.poster{
+    height: 100%;
+    background-size: cover;
 }

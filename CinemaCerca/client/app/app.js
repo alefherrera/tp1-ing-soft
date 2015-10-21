@@ -6,7 +6,8 @@ angular.module('cinemaCercaApp', [
   'ngSanitize',
   'ui.router',
   'ui.bootstrap',
-  'ncy-angular-breadcrumb'
+  'ncy-angular-breadcrumb',
+  'angular-carousel'
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     $urlRouterProvider

@@ -1,11 +1,7 @@
 'use strict';
 
 angular.module('cinemaCercaApp')
-  .controller('MainCtrl', function ($scope, $http) {
-    $scope.awesomeThings = [];
+    .controller('MainCtrl', function($scope, peliculas) {
+        $scope.slides = peliculas;
 
-    $http.get('/api/things').success(function(awesomeThings) {
-      $scope.awesomeThings = awesomeThings;
     });
-
-  });

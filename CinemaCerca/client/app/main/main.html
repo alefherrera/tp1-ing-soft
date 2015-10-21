@@ -8,9 +8,23 @@
 <div class="container">
     <div ncy-breadcrumb></div>
     <div ui-view>
-        <div class="background"></div>
+        <div class="jumbotron">
+            <div class="container">
+                <ul rn-carousel class="image" rn-carousel-index="carouselIndex" rn-carousel-auto-slide="2">
+                    <li ng-repeat="slide in slides">
+                        <!-- <img ng-src="{{slide.Poster}}" class="img-responsive" alt="Image"> -->
+                        <div ng-style="{'background-image': 'url(' + slide.Slide + ')'}" class="poster"></div>
+                        <div class="layer">{{ slide.Title }}</div>
+                    </li>
+                </ul>
+                <div rn-carousel-indicators ng-if="slides.length > 1" slides="slides" rn-carousel-index="carouselIndex"></div>
+                <p>
+                    <a class="btn btn-primary btn-lg" ui-sref="main.peliculas">Ir a Cartelera</a>
+                </p>
+            </div>
+        </div>
     </div>
-   <!--  <div class="row">
+    <!--  <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">Features:</h1>
             <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="thing in awesomeThings">

@@ -17,7 +17,8 @@
     "imdbID": "tt0068646",
     "Type": "movie",
     "Response": "True",
-    "Trailer": "https://www.youtube.com/embed/sY1S34973zA"
+    "Trailer": "https://www.youtube.com/embed/sY1S34973zA",
+    "Slide": "assets/slides/1.jpg"
 }, {
     "Title": "Pulp Fiction",
     "Year": "1994",
@@ -37,7 +38,8 @@
     "imdbID": "tt0110912",
     "Type": "movie",
     "Response": "True",
-    "Trailer": "https://www.youtube.com/embed/s7EdQ4FqbhY"
+    "Trailer": "https://www.youtube.com/embed/s7EdQ4FqbhY",
+    "Slide": "assets/slides/2.jpg"
 }, {
     "Title": "The Shawshank Redemption",
     "Year": "1994",
@@ -57,7 +59,8 @@
     "imdbID": "tt0111161",
     "Type": "movie",
     "Response": "True",
-    "Trailer": "https://www.youtube.com/embed/NmzuHjWmXOc"
+    "Trailer": "https://www.youtube.com/embed/NmzuHjWmXOc",
+    "Slide": "assets/slides/3.jpg"
 }, {
     "Title": "The Dark Knight",
     "Year": "2008",
@@ -77,7 +80,8 @@
     "imdbID": "tt0468569",
     "Type": "movie",
     "Response": "True",
-    "Trailer": "https://www.youtube.com/embed/EXeTwQWrcwY"
+    "Trailer": "https://www.youtube.com/embed/EXeTwQWrcwY",
+    "Slide": "assets/slides/4.jpg"
 }, {
     "Title": "Fight Club",
     "Year": "1999",
@@ -97,7 +101,8 @@
     "imdbID": "tt0137523",
     "Type": "movie",
     "Response": "True",
-    "Trailer": "https://www.youtube.com/embed/SUXWAEX2jlg"
+    "Trailer": "https://www.youtube.com/embed/SUXWAEX2jlg",
+    "Slide": "assets/slides/5.jpg"
 }, {
     "Title": "Inception",
     "Year": "2010",
@@ -117,5 +122,6 @@
     "imdbID": "tt1375666",
     "Type": "movie",
     "Response": "True",
-    "Trailer": "https://www.youtube.com/embed/YoHD9XEInc0"
+    "Trailer": "https://www.youtube.com/embed/YoHD9XEInc0",
+    "Slide": "assets/slides/6.jpg"
 }]
